@@ -31,8 +31,7 @@ header{
     display: flex;
     flex-direction: column;
     width: 250px;
-    
-   
+    min-height: 90.6vh;
     background-color: var(--bg-nav);
     
 }
@@ -144,18 +143,26 @@ main{
   display: flex;
   justify-content: center;
 }
+.table{
+  display: flex;
+  justify-content: center;
+  flex-shrink: 1;
+}
 .table table{
   display: flex;
   justify-content: space-between;
   
- 
-  gap: 15px;
+  width: 60%;
 }
+
+
 .table  table td{
   text-align: center;
   padding: 3px;
   width: 354px;
   height: 64px;
+  margin: 0 2px 0 2px;
+  
   
   
 }
@@ -262,6 +269,12 @@ background-color: #e3e1c9ed;
   }
   .table table{
     margin: auto;
+  }
+}
+@media only screen and (min-height: 720px)
+{
+  .sidebar{
+    min-height: 100vh;
   }
 }
 
