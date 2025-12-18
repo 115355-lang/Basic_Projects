@@ -260,6 +260,9 @@ background-color: #e3e1c9ed;
   header{
     display: none;
   }
+  .table table{
+    margin: auto;
+  }
 }
 
 
