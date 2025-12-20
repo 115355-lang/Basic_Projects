@@ -127,6 +127,10 @@ main{
 .container1{
   background-color: white;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  min-width: none;
+  flex-grow: 1;
 }
 .container1 h4{
   color: var(--text-color);
@@ -140,67 +144,59 @@ main{
   font-weight: 300;
 }
 /* */
-.table {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+.table{
+  display: inline-table;
+  justify-content: center;
+   padding: 0% 20%;
+ 
 }
+.table  tr{
 
-/* Responsive stretching */
-.table-sub {
-    width: 60%;          /* allows stretching */
-    max-width: 900px;     /* stops over-stretching */
-    min-width: 400px;     /* prevents too small */
-    text-align: center;
+  text-align: center;  width: 60%;
+  background-color: #003399;
+  margin: auto;
 }
-
-/* Normal table behavior */
-.table-row {
-  width: 60%;
-}
-
-.table-data {
-    width: 50%;
-    padding: 12px;
+.table  tr td{
+  width: 50%;
 }
 
 
 
 
-.table  table td{
+.table  .table-row td{
   text-align: center;
   padding: 3px;
-  width: 354px;
+  /* width: 354px; */
   height: 64px;
   margin: 0 2px 0 2px;
   
   
   
 }
-.table table td:nth-child(1){
+.table .table-row td:nth-child(1){
   border: 0.8px solid rgb(0, 128, 0);
   background-color: #ebfde3;
   color: var(--text-color);
 
 }
-.table table td:nth-child(2)
+.table td:nth-child(2)
 {
   border: 0.8px solid rgb(0, 51, 153);
   color: var(--text-color);
   background-color: #cdecfe;
 }
-.table table span{
+.table  td span{
   color: var(--text-color);
   font-size: var(--font-heading);
   font-weight: 700;
 }
-.table table td:nth-child(1) p{
+.table  td:nth-child(1) p{
   color: #008000;
   font-size: var(--font-table);
   font-weight: 700;
 
 }
-.table table td:nth-child(2) p{
+.table  td:nth-child(2) p{
   color: #003399;
   font-size: var(--font-table);
   font-weight: 700;
@@ -230,35 +226,34 @@ main{
   gap: 25px;
   background-color: var(--bg-wrapper);
 }
-.table2 table{
-  display: flex;
-  flex-direction: column;
+.table2 {
+  
   width: 100%;
   border-collapse: collapse;
 }
-.table2 table tr td,th{
+.table2  tr td,th{
 border: 0.8px solid rgb(211, 211, 211);
 }
-.table2 table tr td, th{
+.table2  tr td, th{
   padding: 5px;
   color: var(--text-color);
   font-size: var(--font);
   justify-items: center;
 }
-.table2 table tr th
+.table2  tr th
 
 {
 background-color: #e3e1c9ed;
 }
-.table2 table tr td:nth-child(1), th:nth-child(1){
+.table2  tr td:nth-child(1), th:nth-child(1){
   width: 60px;
   text-align: center;
 }
-.table2 table tr td:nth-child(2), th:nth-child(2){
+.table2  tr td:nth-child(2), th:nth-child(2){
   width: 900px;
   text-align: left;
 }
-.table2 table tr td:nth-child(3), th:nth-child(3){
+.table2  tr td:nth-child(3), th:nth-child(3){
   width: 240px;
   text-align: end;
 }

@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+  list-style: none;
+}
+body {
+  background-color: #f0faff;
+}
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #4a98f7;
+  padding: 15px 200px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.nav,
+.nav .nav-links {
+  display: flex;
+  align-items: center;
+}
+.nav {
+  justify-content: space-between;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav.openNav .nav-links {
+  left: 0;
+}
+.nav .navOpenBtn {
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.nav .logo {
+  font-size: 22px;
+  font-weight: 500;
+}
+.nav .navCloseBtn {
+  position: absolute;
+  color: #fff;
+  font-size: 20px;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+}
+
+.nav .nav-links a {
+  transition: all 0.2s ease;
+}
+
+.nav .nav-links {
+  column-gap: 25px;
+}
+.nav .nav-links a:hover {
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  
+}
+.nav .search-icon:hover {
+  background-color: #2883f3;
+}
+.nav .search-icon {
+  padding: 5px 10px;
+  border-radius: 50%;
+  transition: all 0.2s ease-in;
+}
+
+.nav .search-icon {
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+.nav .search-box {
+  position: absolute;
+  right: 250px;
+  height: 45px;
+  max-width: 555px;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s linear;
+}
+.search-box .search-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: rgb(74, 152, 247);
+}
+.search-box input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  background-color: white;
+  padding: 0 15px 0 45px;
+}
+.nav.OpenSearch .nav-links a {
+  opacity: 0;
+  pointer-events: none;
+}
+.nav.OpenSearch .search-box {
+  opacity: 1;
+  pointer-events: auto;
+}
+.nav .navOpenBtn,
+.nav .navCloseBtn {
+  display: none;
+}
+.nav .search-box .search-icon{
+    padding: 0;
+
+
+  }
+  .nav .search-box .search-icon:hover{
+    background-color: transparent;
+    
+
+  }
+
+@media screen and (max-width: 1160px) {
+  .nav {
+    padding: 15px 100px;
+  }
+  .nav .search-box {
+    position: absolute;
+    right: 150px;
+  }
+}
+@media screen and (max-width: 980px) {
+  .nav {
+    padding: 15px 50px;
+  }
+  .nav .search-box {
+    right: 100px;
+    max-width: 400px;
+  }
+}
+@media screen and (max-width: 770px) {
+  .nav .navOpenBtn,
+  .nav .navCloseBtn {
+    display: block;
+  }
+  .nav .nav-links {
+    position: fixed;
+
+    top: 0;
+    left: -100%;
+    width: 280px;
+    max-width: 100%;
+    background-color: rgba(70, 150, 250, 1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-top: 100px;
+    row-gap: 30px;
+
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    z-index: 1000;
+  }
+  
+
+  .nav .search-box {
+    top: calc(100% + 10px);
+    max-width: calc(100% - 20px);
+    right: 50%;
+    transform: translateX(50%);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  .nav .navOpenBtn {
+    padding: 5px 10px;
+    border-radius: 50%;
+    transition: all 0.2s ease-in;
+  }
+  .nav .navOpenBtn:hover{
+    background-color: #2883f3;
+  }
+  .nav .search-box .search-icon{
+    padding: 0;
+
+
+  }
+  .nav .search-box .search-icon:hover{
+    background-color: transparent;
+    
+
+  }
+  .nav .navCloseBtn{
+    padding: 5px 10px;
+    border-radius: 50%;
+    transition: all 0.2s ease-in;
+  }
+  .nav .navCloseBtn:hover{
+    background-color: #2883ff;
+  }
+}
