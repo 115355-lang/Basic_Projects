@@ -72,13 +72,11 @@ a {
   padding: 5px 10px;
   border-radius: 50%;
   transition: all 0.2s ease-in;
-}
-
-.nav .search-icon {
-  color: white;
+   color: white;
   font-size: 20px;
   cursor: pointer;
 }
+
 .nav .search-box {
   position: absolute;
   right: 250px;

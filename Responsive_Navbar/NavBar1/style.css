@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root{
+    --nav-bg-color:rgb(35, 15, 213);
+    --search-icon-bg-color: rgb(47, 15, 252);
+     --search-icon-color: rgb(241, 233, 219);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Poppins";
+}
+a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+li:hover {
+  translate: 50% 0;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--nav-bg-color);
+  padding: 15px 200px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.nav,
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav .nav-links {
+  gap: 20px;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+.nav .logo {
+  font-weight: 500;
+}
+.nav .logo,
+.nav .SearchIcon {
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+.search-box {
+  position: absolute;
+  right: 250px;
+  height: 45px;
+  max-width: 500px;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s linear;
+}
+.search-box input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding-left: 5px;
+  font-size: 1rem;
+  border-left: 0.8px solid rgb(91, 88, 140);
+  z-index: 1;
+  border-radius: 0 6px 6px 0;
+}
+.search-box .SearchIcon {
+  position: absolute;
+  right: 0;
+  top: 50%;
+
+  transform: translateY(-50%);
+  color: var(--search-icon-color);
+  border: 0.8px solid #4a98f7;
+  height: 110%;
+  width: calc(100% + 60px);
+
+  display: flex;
+  align-items: center;
+  padding: 20px;
+
+  border: none;
+  outline: none;
+  background-color: var(--search-icon-bg-color);
+  z-index: -1;
+  border-radius: 100px 30px 30px 100px;
+}
+.search-box input{
+  position: relative;
+  right: 2px;
+}
+.Appear .search-box {
+  pointer-events: auto;
+  opacity: 1;
+}
+.Appear .nav-links {
+  pointer-events: none;
+  opacity: 0;
+}
+.uil{
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    align-content: center;
+}
+.nav-links .uil:hover
+{
+    border: none;
+    background-color: rgb(9, 9, 254);
+}
+.nav > .uil:hover
+{
+    background-color: rgb(6, 6, 207);
+}
+.nav.OpenNav .nav-links{
+    left: 0;
+}
+.nav .navOpen,
+.nav .navClose{
+    display: none;
+}
+
+@media  screen and (max-width: 1250px) {
+    
+    .nav{
+        padding: 15px 100px;
+    }
+}
+@media screen and (max-width: 1090px){
+.search-box{
+    max-width: 350px;
+        left:  40%;
+    }
+}
+@media screen and (max-width: 920px){
+  .nav .navOpen,
+   .nav .navClose{
+    display: block;
+   }
+    .nav .nav-links{
+        position: fixed;
+        top: 0;
+        left: -100%;
+        background-color: rgb(23, 45, 233);
+        z-index: 1000;
+        height: 100%;
+        width: 280px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 100px;
+        row-gap: 10px;
+        transition: all 0.5s ease-in, all 0.5s ease-out;
+        
+    }
+    .nav .nav-links li{
+        font-size: 1.2rem;
+        /* background-color: red; */
+        height: 50px;
+        width: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        
+    }
+    .nav-links li:hover{
+        background-color: rgb(9, 9, 249);
+        
+    }
+    .nav .logo{
+        z-index: -1;
+    }
+    .nav-links .SearchIcon{
+        position: absolute;
+        top: 3%;
+        right: 20px;
+    }
+}
+@media screen and (max-width: 850px)
+{
+    .search-box{
+        
+        left: 35%;
+    }
+}
+@media screen and (max-width: 775px)
+{
+  .nav{
+    padding: 15px 30px;
+  }
+    .search-box{
+        
+    top: calc(100% + 10px);
+    max-width: calc(100% - 100px);
+    left: 80px;
+    /* right: 100%; */
+    
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: -1;
+        
+    }
+    .nav-links{
+    display: block;
+    }
+}
