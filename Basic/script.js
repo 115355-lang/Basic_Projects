@@ -7,9 +7,10 @@ const next = document.querySelector(".nextbtn");
 const prev = document.querySelector(".prevbtn");
 const reset = document.querySelector(".reset");
 const line=document.querySelectorAll(".div");
+
 const max = 5;
 const current = 1;
-const
+
 
 next.addEventListener("click",()=>{
 
@@ -66,8 +67,15 @@ icon5.classList.add("fa-solid");
 icon5.classList.add("fa-check");
 icon5.classList.add("icons")
 
-// icon1.
 
 })
+
+
+
+    
+
+
+
+
 
 
